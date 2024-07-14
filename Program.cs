@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StreamProcessing;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -10,73 +11,42 @@ class Program
         string inputFilePath = "input.txt";
 
         string outputFilePath = "output.txt";
-     
+
         string logFilePath = "log.txt";
+
+        List<string> lines = new List<string>();
+        var logger = new Logs(logFilePath);
 
         try
         {
-            
-            List<string> lines = new List<string>();
-            using (StreamReader reader = new StreamReader(inputFilePath))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    lines.Add(line);
-                }
-            }
+            var reader = new Reader();
+            lines = reader.ReadLines(inputFilePath);
+            logger.Log("File reading completed successfully.");
 
-            
-            List<string> processedLines = new List<string>();
-            foreach (var line in lines)
-            {
-                if (!line.Contains("skip", StringComparison.OrdinalIgnoreCase))
-                {
-                    processedLines.Add(line.ToUpper()); 
-                }
-            }
+            var modifier = new Modifier();
+            var sortedLines = modifier.SortLines(lines);
+            logger.Log("File sorting completed successfully.");
 
-            
-            processedLines.Sort();
+            var upperLines = modifier.ToUpperCase(sortedLines);
+            logger.Log("File conversion to uppercase completed successfully.");
 
-            
-            using (StreamWriter writer = new StreamWriter(outputFilePath))
-            {
-                foreach (var processedLine in processedLines)
-                {
-                    writer.WriteLine(processedLine); 
-                }
-            }
+            var writer = new Writer();
+            writer.Write(outputFilePath, upperLines);
+            logger.Log("File writing completed successfully.");
 
-            
-            using (StreamWriter logWriter = new StreamWriter(logFilePath, true))
-            {
-                logWriter.WriteLine($"File processing completed successfully.");
-            }
+
         }
         catch (FileNotFoundException ex)
         {
-            
-            using (StreamWriter logWriter = new StreamWriter(logFilePath, true))
-            {
-                logWriter.WriteLine($"Error: File not found - {ex.FileName}");
-            }
+            logger.Log($"Input file not found: {ex.Message}");
         }
         catch (IOException ex)
         {
-          
-            using (StreamWriter logWriter = new StreamWriter(logFilePath, true))
-            {
-                logWriter.WriteLine($"I/O Error: {ex.Message}");
-            }
+            logger.Log($"I/O Error: {ex.Message}");
         }
         catch (Exception ex)
         {
-          
-            using (StreamWriter logWriter = new StreamWriter(logFilePath, true))
-            {
-                logWriter.WriteLine($"General Error: {ex.Message}");
-            }
+            logger.Log($"Unknown error: {ex.Message}");
         }
     }
 }
