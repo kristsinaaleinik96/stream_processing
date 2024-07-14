@@ -19,7 +19,7 @@ namespace StreamProcessing
         {
             using (StreamWriter logWriter = new StreamWriter(LogFilePath, true))
             {
-                logWriter.WriteLine($"Time of event: {DateTime.Now:dd-MM-yyyy} {message} ");
+                logWriter.WriteLine($"Time of event: {DateTime.Now:dd-MM-yyyy HH:mm:ss}. Message: {message} ");
             }
         }
     }
