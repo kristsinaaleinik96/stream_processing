@@ -24,7 +24,10 @@ class Program
             logger.Log("File reading completed successfully.");
 
             var modifier = new Modifier();
-            var sortedLines = modifier.SortLines(lines);
+            var filteredLines = modifier.SkipLinesContaining(lines, "skip");
+            logger.Log("Word skipping completed successfully.");
+
+            var sortedLines = modifier.SortLines(filteredLines);
             logger.Log("File sorting completed successfully.");
 
             var upperLines = modifier.ToUpperCase(sortedLines);

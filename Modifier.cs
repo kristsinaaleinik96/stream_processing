@@ -9,6 +9,18 @@ namespace StreamProcessing
 {
     internal class Modifier
     {
+        public List<string> SkipLinesContaining(List<string> lines, string substring)
+        {
+            List<string> filteredLines = new List<string>();
+            foreach (var line in lines)
+            {
+                if (!line.Contains(substring))
+                {
+                    filteredLines.Add(line);
+                }
+            }
+            return filteredLines;
+        }
         public List<string> SortLines(List<string> lines)
         {
             lines.Sort();
@@ -24,7 +36,5 @@ namespace StreamProcessing
             }
             return upperLines;
         }
-
-
     }
 }
