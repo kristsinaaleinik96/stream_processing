@@ -1,13 +1,4 @@
-Time of event14-07-2024 File reading completed successfully. 
-Time of event14-07-2024 File sorting completed successfully. 
-Time of event14-07-2024 File conversion to uppercase completed successfully. 
-Time of event14-07-2024 File modifying completed successfully. 
-Time of event14-07-2024 File writing completed successfully 
-Time of event14-07-2024 File reading completed successfully. 
-Time of event14-07-2024 File sorting completed successfully. 
-Time of event14-07-2024 File conversion to uppercase completed successfully. 
-Time of event14-07-2024 File modifying completed successfully. 
-Time of event14-07-2024 File writing completed successfully 
+Time of event14-07-2024 Input file not found: Could not find file 'C:\Users\Krystsina.Aleinik\source\repos\StreamProcessing\input.txt'. 
 Time of event14-07-2024 File reading completed successfully. 
 Time of event14-07-2024 File sorting completed successfully. 
 Time of event14-07-2024 File conversion to uppercase completed successfully. 
