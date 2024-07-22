@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StreamProcessing": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Krystsina.Aleinik\\source\\repos\\StreamProcessing"
+    }
+  }
+}

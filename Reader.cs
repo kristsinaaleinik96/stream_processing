@@ -12,13 +12,26 @@ namespace StreamProcessing
         public List<string> ReadLines(string filePath)
         {
             List<string> lines = new List<string>();
-            using (StreamReader reader = new StreamReader(filePath))
+            try
             {
-                string? line;
-                while ((line = reader.ReadLine()) != null)
+                using (StreamReader reader = new StreamReader(filePath))
                 {
-                    lines.Add(line);
+                    string? line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
                 }
+                string logContent = string.Join(Environment.NewLine, lines);
+                Logs.Log($"File input.txt contains next text:{logContent}", Logs.GetLogFilePath());
+            }
+            catch (FileNotFoundException ex)
+            {
+                Logs.Log($"Input file not found: {ex.Message}", Logs.GetLogFilePath());
+            }
+            catch (IOException ex)
+            {
+                Logs.Log($"I/O Error: {ex.Message}", Logs.GetLogFilePath());
             }
             return lines;
         }

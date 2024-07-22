@@ -1,7 +1,82 @@
-Time of event: 14-07-2024 17:56:28. Message: Input file not found: Could not find file 'C:\Users\Krystsina.Aleinik\source\repos\StreamProcessing\input.txt'. 
-Time of event: 14-07-2024 17:58:05. Message: Input file not found: Could not find file 'C:\Users\Krystsina.Aleinik\source\repos\StreamProcessing\input.txt'. 
-Time of event: 14-07-2024 17:58:42. Message: File reading completed successfully. 
-Time of event: 14-07-2024 17:58:42. Message: Word skipping completed successfully. 
-Time of event: 14-07-2024 17:58:42. Message: File sorting completed successfully. 
-Time of event: 14-07-2024 17:58:42. Message: File conversion to uppercase completed successfully. 
-Time of event: 14-07-2024 17:58:42. Message: File writing completed successfully. 
+Time of event: 22-07-2024 18:11:25. Message: File input.txt contains next text:skip
+
+
+1newfile
+0new file
+
+testtest
+
+943234234
+catdog
+
+
+nuMberss 233333333333333333333333333333
+
+Test
+ASDew
+skipskipskipskipskipskipskip
+-qwer 
+Time of event: 22-07-2024 18:11:25. Message: File input.txt was filtered and contains next text:
+
+1newfile
+0new file
+
+testtest
+
+943234234
+catdog
+
+
+nuMberss 233333333333333333333333333333
+
+Test
+ASDew
+-qwer 
+Time of event: 22-07-2024 18:11:25. Message: File input.txt was sorted and contains next text:
+
+
+
+
+
+
+-qwer
+0new file
+1newfile
+943234234
+ASDew
+catdog
+nuMberss 233333333333333333333333333333
+Test
+testtest 
+Time of event: 22-07-2024 18:11:25. Message: File input.txt has been converted to uppercase and contains next text:
+
+
+
+
+
+
+-QWER
+0NEW FILE
+1NEWFILE
+943234234
+ASDEW
+CATDOG
+NUMBERSS 233333333333333333333333333333
+TEST
+TESTTEST 
+Time of event: 22-07-2024 18:11:25. Message: File input.txt was filtered and contains next text:
+
+
+
+
+
+
+-QWER
+0NEW FILE
+1NEWFILE
+943234234
+ASDEW
+CATDOG
+NUMBERSS 233333333333333333333333333333
+TEST
+TESTTEST 

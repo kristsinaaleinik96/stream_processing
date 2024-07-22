@@ -9,15 +9,20 @@ namespace StreamProcessing
 {
     internal class Logs
     {
-        private string LogFilePath;
-        public Logs(string LogFilePath)
+        private static string? LogFilePath;
+        public Logs(string logFilePath)
         {
-            this.LogFilePath = LogFilePath;
+            LogFilePath = logFilePath;
         }
 
-        public void Log(string message)
+        public static string? GetLogFilePath()
         {
-            using (StreamWriter logWriter = new StreamWriter(LogFilePath, true))
+            return LogFilePath;
+        }
+
+        public static void Log(string message, string? logFilePath)
+        {
+            using (StreamWriter logWriter = new StreamWriter(logFilePath, true))
             {
                 logWriter.WriteLine($"Time of event: {DateTime.Now:dd-MM-yyyy HH:mm:ss}. Message: {message} ");
             }
