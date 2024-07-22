@@ -23,7 +23,7 @@ namespace StreamProcessing
                     }
                 }
                 string logContent = string.Join(Environment.NewLine, lines);
-                Logs.Log($"File input.txt contains next text:{logContent}", Logs.GetLogFilePath());
+                Logs.Log($"File input.txt contains next text:\n {logContent}", Logs.GetLogFilePath());
             }
             catch (FileNotFoundException ex)
             {

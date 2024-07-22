@@ -18,7 +18,7 @@ namespace StreamProcessing
                     writer.WriteLine(line);
                 }
                 string logContent = string.Join(Environment.NewLine, lines);
-                Logs.Log($"File input.txt was filtered and contains next text:{logContent}", Logs.GetLogFilePath());
+                Logs.Log($"Final result of writing input.txt contains:{logContent}", Logs.GetLogFilePath());
             }
         }
     }

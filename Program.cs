@@ -18,32 +18,14 @@ class Program
         var logger = new Logs(logFilePath);
 
         
-            var reader = new Reader();
-            lines = reader.ReadLines(inputFilePath);
+        var reader = new Reader();
+        lines = reader.ReadLines(inputFilePath);
 
-            var modifier = new Modifier();
-            var filteredLines = modifier.SkipLinesContaining(lines, "skip");
-
-            var sortedLines = modifier.SortLines(filteredLines);
-
-            var upperLines = modifier.ToUpperCase(sortedLines);
-
-            var writer = new Writer();
-            writer.Write(outputFilePath, upperLines);
-
-
-        
-        //catch (FileNotFoundException ex)
-        //{
-        //    logger.Log($"Input file not found: {ex.Message}", logger.GetLogFilePath());
-        //}
-        //catch (IOException ex)
-        //{
-        //    logger.Log($"I/O Error: {ex.Message}", logger.GetLogFilePath());
-        //}
-        //catch (Exception ex)
-        //{
-        //    logger.Log($"Unknown error: {ex.Message}", logger.GetLogFilePath());
-        //}
+        var modifier = new Modifier();
+        var filteredLines = modifier.SkipLinesContaining(lines, "skip");
+        var sortedLines = modifier.SortLines(filteredLines);
+        var upperLines = modifier.ToUpperCase(sortedLines);
+        var writer = new Writer();
+        writer.Write(outputFilePath, upperLines);
     }
 }

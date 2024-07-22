@@ -1,4 +1,5 @@
-Time of event: 22-07-2024 18:11:25. Message: File input.txt contains next text:skip
+Time of event: 22-07-2024 18:36:25. Message: File input.txt contains next text:
+ skip
 
 
 1newfile
@@ -16,7 +17,7 @@ Test
 ASDew
 skipskipskipskipskipskipskip
 -qwer 
-Time of event: 22-07-2024 18:11:25. Message: File input.txt was filtered and contains next text:
+Time of event: 22-07-2024 18:36:25. Message: File input.txt was filtered and contains next text:
 
 1newfile
 0new file
@@ -32,7 +33,7 @@ nuMberss 233333333333333333333333333333
 Test
 ASDew
 -qwer 
-Time of event: 22-07-2024 18:11:25. Message: File input.txt was sorted and contains next text:
+Time of event: 22-07-2024 18:36:25. Message: File input.txt was sorted and contains next text:
 
 
 
@@ -48,7 +49,7 @@ catdog
 nuMberss 233333333333333333333333333333
 Test
 testtest 
-Time of event: 22-07-2024 18:11:25. Message: File input.txt has been converted to uppercase and contains next text:
+Time of event: 22-07-2024 18:36:25. Message: File input.txt has been converted to uppercase and contains next text:
 
 
 
@@ -64,7 +65,7 @@ CATDOG
 NUMBERSS 233333333333333333333333333333
 TEST
 TESTTEST 
-Time of event: 22-07-2024 18:11:25. Message: File input.txt was filtered and contains next text:
+Time of event: 22-07-2024 18:36:25. Message: Final result of writing input.txt contains:
 
 
 
